@@ -1,0 +1,70 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    background : #4255a0;
+
+}
+
+.Milabel {
+
+    border-style: solid;
+
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #5482a4;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #092327;
+    width: ax-w
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+
+
+}
+
+.menu li a:hover{
+    background:#ef8354
+}
+
+.caja {
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: #889ccf;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #5878ca;
+}
