@@ -23,7 +23,7 @@ namespace Chimbank
         {
             try
             {
-                cn = new SqlConnection("Data Source=DESKTOP-RPNU9DB;Initial Catalog=CHIMBANK;Integrated Security=True");
+                cn = new SqlConnection("Data Source=DESKTOP-U4HB8MQ;Initial Catalog=CHIMBANK;Integrated Security=True");
                 cn.Open();
 
             }

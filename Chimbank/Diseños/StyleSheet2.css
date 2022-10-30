@@ -3,11 +3,14 @@
     background : #4255a0;
 
 }
+.text {
+    color: #FFFFFF;
+    font-weight: bold;
+}
 
 .Milabel {
 
     border-style: solid;
-
     color: #FFFFFF;
     font-family: Arial;
     font-size: 30pt;
@@ -29,7 +32,7 @@
     list-style: none;
     padding: 0;
     background: #092327;
-    width: ax-w
+    width: auto;
     max-width: 1000px;
     margin: auto;
 

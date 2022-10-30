@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PagosMenu.aspx.cs" Inherits="Chimbank.Pays" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Solicitar.aspx.cs" Inherits="Chimbank.Credito.AbonarCredito" %>
 
 <!DOCTYPE html>
 

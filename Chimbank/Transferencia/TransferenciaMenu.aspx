@@ -33,7 +33,7 @@
                         <asp:ImageButton ID="imgbtnVerMovimientos" runat="server" Height="120px" ImageUrl="~/Design/ImgMovimientos.png" OnClick="imgbtnVerMovimientos_Click" Width="212px" />
                     </td>
                     <td align="center">
-                        <asp:ImageButton ID="ImageButton3" runat="server" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" OnClick="ImageButton3_Click" />
                     </td>
                 </tr>
                 <tr>

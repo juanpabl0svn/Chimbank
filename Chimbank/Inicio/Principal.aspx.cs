@@ -14,7 +14,7 @@ namespace Chimbank
         {
             if (Usuario.user.Nit == null)
             {
-                Response.Redirect("/Main.aspx");
+                Response.Redirect("/Iniciar.aspx");
             }
             else
             {

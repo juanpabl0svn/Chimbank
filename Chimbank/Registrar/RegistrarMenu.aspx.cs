@@ -217,6 +217,8 @@ namespace Chimbank
 
                 BD.Insertar(txtId.Text, Generar_cuenta(), txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);
                 Borrar_casillas();
+                BD.InfoUsuario(BD.BuscarUsuario(txtCorreo.Text, txtContraseña.Text));
+                Response.Redirect("/Inicio/Principal.aspx");
             }
 
 

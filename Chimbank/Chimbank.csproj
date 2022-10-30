@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ajustes\AjustesMenu.aspx" />
+    <Content Include="Credito\Solicitar.aspx" />
     <Content Include="Credito\AbonarCredito.aspx" />
     <Content Include="Credito\CreditoMenu.aspx" />
     <Content Include="Diseños\ImgBanco.png" />
@@ -89,6 +90,13 @@
     <Content Include="Iniciar.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credito\Solicitar.aspx.cs">
+      <DependentUpon>Solicitar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Credito\Solicitar.aspx.designer.cs">
+      <DependentUpon>Solicitar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Credito\AbonarCredito.aspx.cs">
       <DependentUpon>AbonarCredito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

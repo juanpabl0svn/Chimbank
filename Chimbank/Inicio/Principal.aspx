@@ -97,7 +97,7 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                <tr>
+                <tr >
                     <td align="center">
                         <asp:ImageButton ID="imgbtnHacerTransfer" runat="server" Height="110px" ImageUrl="~/Diseños/ImgTransferir.png" OnClick="imgbtnHacerTransfer_Click" Width="144px" />
                     </td>
@@ -108,11 +108,14 @@
                         <asp:ImageButton ID="imgbtnCredito" runat="server" Height="111px" ImageUrl="~/Diseños/ImgCredito.png" OnClick="imgbtnCredito_Click" Width="147px" />
                     </td>
                 </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr align="center">
+                    <td align="center"> 
+                        <asp:Label runat="server" CssClass="text" Text="Transferir"  ></asp:Label></td>
+                    <td align="center"><asp:Label runat="server" CssClass="Label" Text="Ver movimientos"></asp:Label></td>
+                    <td align="center"><asp:Label runat="server" CssClass="Label" Text="Pagar credito"></asp:Label></td>
+
                 </tr>
+                
             </table>
             <br />
 
