@@ -9,6 +9,7 @@ using System.Text;
 using System.Security.Claims;
 using System.Drawing;
 using Microsoft.SqlServer.Server;
+using System.Web.UI.WebControls;
 
 namespace Chimbank
 {
@@ -34,11 +35,11 @@ namespace Chimbank
             }
         }
 
-        public void Insertar(string nit,string numero_cuenta, string nombre, string apellido, string correo, string clave)
+        public void Insertar(string nit, string numero_cuenta, string nombre, string apellido, string correo, string clave)
         {
 
             cmd = new SqlCommand("INSERT INTO dbo.usuario (nit, numero_cuenta, nombre, apellido, correo, clave, dinero ,credito) " +
-                "values ('"+nit+ "', '"+ numero_cuenta+"' ,'" + nombre+ "','"+apellido+ "','"+correo+"','"+clave+"','','')", cn);
+                "values ('" + nit + "', '" + numero_cuenta + "' ,'" + nombre + "','" + apellido + "','" + correo + "','" + clave + "','','')", cn);
             cmd.ExecuteNonQuery();
 
         }
@@ -49,7 +50,7 @@ namespace Chimbank
             bool existe = false;
             cmd = new SqlCommand("Select * from dbo.usuario where nit = '" + nit + "'", cn);
             rdr = cmd.ExecuteReader();
-            
+
             if (rdr.Read())
             {
                 existe = true;
@@ -67,7 +68,7 @@ namespace Chimbank
             bool existe = false;
             cmd = new SqlCommand("Select * from dbo.usuario where correo = '" + correo + "'", cn);
             rdr = cmd.ExecuteReader();
-            
+
             if (rdr.Read())
             {
                 existe = true;
@@ -115,7 +116,7 @@ namespace Chimbank
                     string dinero = rdr["dinero"].ToString();
                     string credito = rdr["credito"].ToString();
 
-                    Persona = new Usuario(nit,numero_cuenta ,nombre, apellido, correo, clave , double.Parse(dinero), double.Parse(credito));
+                    Persona = new Usuario(nit, numero_cuenta, nombre, apellido, correo, clave, double.Parse(dinero), double.Parse(credito));
 
                 }
                 rdr.Close();
@@ -169,7 +170,7 @@ namespace Chimbank
 
             return escribir;
 
-            
+
 
 
         }
@@ -229,33 +230,28 @@ namespace Chimbank
             }
 
             rdr.Close();
-            
 
-             
-            cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" +  nuevo_valor + "' where numero_cuenta = '" + numero_cuenta + "'", cn);
-            rdr = cmd.ExecuteReader();
 
-            rdr.Close();
 
+            cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + nuevo_valor + "' where numero_cuenta = '" + numero_cuenta + "'", cn);
+            cmd.ExecuteReader();
+
+ 
             Usuario.user.Dinero = Usuario.user.Dinero - valor;
 
             cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + Usuario.user.Dinero + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
-            rdr = cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
 
-            rdr.Close();
-
-            CrearMovimiento(numero_cuenta,valor);
+            CrearMovimiento(numero_cuenta, valor);
 
         }
 
 
-        public void CrearMovimiento(string recibido , double valor)
+        public void CrearMovimiento(string recibido, double valor)
         {
 
             cmd = new SqlCommand("Insert into dbo.movimientos (enviado, recibido, valor) values ('" + Usuario.user.Numero_cuenta + "','" + recibido + "'," + valor + ")", cn);
             cmd.ExecuteNonQuery();
-
-            rdr.Close();
 
         }
 
@@ -302,6 +298,55 @@ namespace Chimbank
             cmd.ExecuteNonQuery();
 
         }
-    
+
+        public void HacerCredito(double nuevo_credito)
+        {
+            if (Usuario.user.Credito == 0)
+            {
+                cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+                cmd.ExecuteReader();
+
+            }
+            else
+            {
+
+                //Labl con error
+            }
+            
+
+        }
+
+        public void PagarCredito(double valor_pagar)
+        {
+            cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + (Usuario.user.Credito - valor_pagar) + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+            cmd.ExecuteReader();
+        }
+
+        public void Cambiar_contraseña(string Nueva_clave)
+        {
+
+            cmd = new SqlCommand("UPDATE dbo.usuario SET clave='" + Nueva_clave + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+            cmd.ExecuteReader();
+
+        }
+
+        public void Cambiar_contraseña(string Nueva_clave, string cuenta, string nit, string correo)
+        {
+
+            cmd = new SqlCommand("UPDATE dbo.usuario SET clave='" + Nueva_clave + "' where numero_cuenta = '" + cuenta + "' AND correo = '" + correo + "' AND nit = '" + nit + "'", cn);
+            cmd.ExecuteReader();
+
+        }
+
+        public void AgregarDinero(double nuevo_dinero)
+        {
+            Usuario.user.Dinero += nuevo_dinero;
+            cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + Usuario.user.Dinero + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+            cmd.ExecuteReader();
+
+        }
+             
+
+
     }
 }

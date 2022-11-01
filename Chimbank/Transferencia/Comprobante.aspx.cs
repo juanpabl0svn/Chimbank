@@ -29,6 +29,8 @@ namespace Chimbank
 
             txtVoucher.Text = escribir.ToString();
 
+            voucherList.Clear();
+
 
         }
 

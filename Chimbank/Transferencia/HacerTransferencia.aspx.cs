@@ -64,6 +64,35 @@ namespace Chimbank
 
         public bool Espacios_vacios()
         {
+            if (String.IsNullOrEmpty(txtNit.Text) || String.IsNullOrWhiteSpace(txtNit.Text))
+            {
+                lblErrorNit.Visible = true;
+                lblErrorNit.Text = "Ingrese nit";
+                return true;
+
+            }
+            else if (String.IsNullOrEmpty(txtNumeroCuenta.Text) || String.IsNullOrWhiteSpace(txtNumeroCuenta.Text))
+            {
+                lblErrorNumeroCuenta.Visible = true;
+                lblErrorNumeroCuenta.Text = "Ingrese numero de cuenta";
+                return true;
+
+            }
+            else if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                lblErrorNombre.Visible = true;
+                lblErrorNombre.Text = "Ingrese nombre del propietario de la cuenta";
+                return true;
+
+            }
+            else if (String.IsNullOrEmpty(txtValor.Text) || String.IsNullOrWhiteSpace(txtValor.Text))
+            {
+                lblErrorNit.Visible = true;
+                lblErrorNit.Text = "Ingrese valor de la transferencia";
+                return true;
+
+            }
+
             return false;
 
         }
@@ -83,7 +112,8 @@ namespace Chimbank
             }
             else if (double.Parse(txtValor.Text) > Usuario.user.Dinero || double.Parse(txtValor.Text) <= 0)
             {
-               
+                lblErrorValor.Visible = true;
+                lblErrorValor.Text = "Valor no valido";
 
             }
             else
