@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class Transfer
+    public partial class PagarCredito
     {
 
         /// <summary>
@@ -24,21 +24,30 @@ namespace Chimbank
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// imgbtnHacerTransfer control.
+        /// txtDineroAbonar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnHacerTransfer;
+        protected global::System.Web.UI.WebControls.TextBox txtDineroAbonar;
 
         /// <summary>
-        /// imgbtnVerMovimientos control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnVerMovimientos;
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// btnAbonar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAbonar;
     }
 }

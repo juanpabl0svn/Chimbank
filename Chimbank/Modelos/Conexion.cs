@@ -234,9 +234,10 @@ namespace Chimbank
 
 
             cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + nuevo_valor + "' where numero_cuenta = '" + numero_cuenta + "'", cn);
-            cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
 
- 
+
+
             Usuario.user.Dinero = Usuario.user.Dinero - valor;
 
             cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + Usuario.user.Dinero + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
@@ -299,52 +300,40 @@ namespace Chimbank
 
         }
 
-        public void HacerCredito(double nuevo_credito)
+        public void HacerCredito(double nuevo_credito, double prestamo)
         {
-            if (Usuario.user.Credito == 0)
-            {
-                cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
-                cmd.ExecuteReader();
-
-            }
-            else
-            {
-
-                //Labl con error
-            }
             
+            
+            cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "', dinero = '"+(Usuario.user.Dinero + prestamo)+"' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+            cmd.ExecuteNonQuery();
+
+
 
         }
 
-        public void PagarCredito(double valor_pagar)
+        public void PagarCredito(double valor_pagar, double nuevo_credito)
         {
-            cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + (Usuario.user.Credito - valor_pagar) + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
-            cmd.ExecuteReader();
+            cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "', dinero = '"+(Usuario.user.Dinero - valor_pagar)+"' " +
+                "where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
+            cmd.ExecuteNonQuery();
         }
 
-        public void Cambiar_contraseña(string Nueva_clave)
-        {
-
-            cmd = new SqlCommand("UPDATE dbo.usuario SET clave='" + Nueva_clave + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
-            cmd.ExecuteReader();
-
-        }
 
         public void Cambiar_contraseña(string Nueva_clave, string cuenta, string nit, string correo)
         {
-
             cmd = new SqlCommand("UPDATE dbo.usuario SET clave='" + Nueva_clave + "' where numero_cuenta = '" + cuenta + "' AND correo = '" + correo + "' AND nit = '" + nit + "'", cn);
-            cmd.ExecuteReader();
-
+            cmd.ExecuteNonQuery();
         }
 
         public void AgregarDinero(double nuevo_dinero)
         {
             Usuario.user.Dinero += nuevo_dinero;
             cmd = new SqlCommand("UPDATE dbo.usuario SET dinero='" + Usuario.user.Dinero + "' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
-            cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
 
         }
+
+
              
 
 

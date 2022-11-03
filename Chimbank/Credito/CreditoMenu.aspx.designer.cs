@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class CreditoMenu
+    public partial class Credito
     {
 
         /// <summary>

@@ -17,7 +17,7 @@ namespace Chimbank
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Usuario.user = new Usuario();
-            Response.Redirect("Iniciar.aspx");
+            Response.Redirect("/Iniciar.aspx");
 
         }
     }

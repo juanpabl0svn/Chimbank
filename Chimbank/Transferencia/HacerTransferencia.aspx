@@ -38,7 +38,7 @@
             </tr>
         </table>
         <div>
-            <table style="width:50%; background-color: #008080;" align="center">
+            <table style="border-style: outset;width:50%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -67,7 +67,7 @@
             <br />
             <br />
             <br />
-            <table style="width:80%; background-color: #008080;" align="center">
+            <table style="border-style: outset;width:80%; background-color: #008080;" align="center">
                 <tr>
                     <td class="auto-style1">
                         <asp:Label ID="Label1" runat="server" Text="Numero de cuenta"></asp:Label>

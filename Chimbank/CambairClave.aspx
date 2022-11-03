@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarMenu.aspx.cs" Inherits="Chimbank.Sign_up" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CambairClave.aspx.cs" Inherits="Chimbank.CambiarClave" %>
 
 <!DOCTYPE html>
 
@@ -9,19 +9,26 @@
     <link href ="/Diseños/StyleSheet1.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .auto-style1 {
-            height: 23px;
+            width: 263px;
         }
-        .auto-style2 {
-            width: 100%;
+        .auto-style5 {
+            width: 381px;
+        }
+        .auto-style6 {
+            width: 28px;
+        }
+        .auto-style7 {
+            width: 60%;
         }
     </style>
 </head>
 <body>
+
     <form id="form1" runat="server">
         <table class="auto-style2">
                                         <tr>
                                             <td>
-                                                <asp:Label ID="Label8" CssClass="Milabel" runat="server" Text="REGISTAR"></asp:Label>
+                                                <asp:Label ID="Label8" CssClass="Milabel" runat="server" Text="CAMBIAR CONTRASEÑA"></asp:Label>
                                             </td>
                                             <td>&nbsp;</td>
                                             <td>&nbsp;</td>
@@ -41,10 +48,10 @@
                             <tr>
  
                                 <td style="border-style: none" >
-                                    <asp:Label ID="Label1" runat="server" Text="NIT"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" Text="Numero de cuenta"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtNumeroCuenta" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorYaexiste" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
        
@@ -52,11 +59,10 @@
                             <tr>
   
                                 <td >
-                                    <asp:Label ID="Label2" runat="server" Text="Nombre"></asp:Label>
+                   
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-                                    <asp:Label ID="lblErrorNombreVacio" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
+                             
                                 </td>
 
 
@@ -64,10 +70,10 @@
                             <tr>
 
                                 <td >
-                                    <asp:Label ID="Label3" runat="server" Text="Apellido"></asp:Label>
+                                    <asp:Label ID="Label3" runat="server" Text="NIT"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtNit" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorApellidoVacio" runat="server" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
   
@@ -77,21 +83,20 @@
 
 
                                 <td >
-                                    <asp:Label ID="Label4" runat="server" Text="Correo"></asp:Label>
+                                
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
-                                    <asp:Label ID="lblErrorCorreoInvalido" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
+                
                                 </td>
     
                             </tr>
                             <tr>
 
                                 <td >
-                                    <asp:Label ID="Label5" runat="server" Text="Contraseña"></asp:Label>
+                                    <asp:Label ID="Label5" runat="server" Text="Correo"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" show="*"></asp:TextBox>
+                                    <asp:TextBox ID="txtCorreo" runat="server" TextMode="Password" show="*"></asp:TextBox>
                                     <asp:Label ID="lblErrorContraseña" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
    
@@ -99,11 +104,10 @@
                             <tr>
 
                                 <td>
-                                    <asp:Label ID="Label6" runat="server" Text="Confirmar contraseña"></asp:Label>
+                                    
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password"></asp:TextBox>
-                                    <asp:Label ID="lblErrorContraseñaConfirmar" runat="server"  Text="Label" Visible="False" ForeColor="Red"></asp:Label>
+                                    
                                 </td>
     
        
@@ -111,20 +115,28 @@
                             </tr>
                             
                             <tr>
-          
+
                                 <td >
-                                    &nbsp;</td>
+                                    <asp:Label ID="Label4" runat="server" Text="Nueva contraseña"></asp:Label>
+                                </td>
                                 <td >
-                                    &nbsp;</td>
- 
+                                    <asp:TextBox ID="txtClave" runat="server" ></asp:TextBox>
+                                    <asp:Label ID="Label6" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
+                                </td>
+   
+                            </tr>
+                            <tr>
+
                             </tr>
                             <tr>
          
                                 <td class="auto-style1">
-                                    <asp:CheckBox ID="chConfirmar" runat="server" />
-                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registrar/TermsCondi.aspx">Ver terminos y condiciones</asp:HyperLink>
+                                    
+                                    <asp:Label ID="Label2" runat="server" Text="Confirmar nueva contraseña"></asp:Label>
+                                    
                                 </td>
                                 <td>
+                                    <asp:TextBox ID="txtclaveConfirmar" runat="server"  ></asp:TextBox>
 
                                     <asp:Label ID="lblErrorTC" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
 
@@ -137,7 +149,7 @@
             <table style="width:60%;" align="center">
                 <tr>
                     <td class="auto-style1">
-                                    <asp:Button ID="Button1" runat="server" CssClass="button" Text="Registrar" OnClick="btnRegistrar_Click" />
+                                    <asp:Button ID="Button1" runat="server" CssClass="button" Text="Cambiar" OnClick="btnRegistrar_Click" />
                                 </td>
                     <td class="auto-style1"></td>
                     <td class="auto-style1"></td>
@@ -160,3 +172,4 @@
     </form>
 </body>
 </html>
+

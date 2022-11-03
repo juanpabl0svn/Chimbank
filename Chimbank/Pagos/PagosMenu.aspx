@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PagosMenu.aspx.cs" Inherits="Chimbank.Pays" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PagosMenu.aspx.cs" Inherits="Chimbank.PagosMenu" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,47 @@
 
     </ul>
     <form id="form1" runat="server">
+        <br />
+        <br />
+        <br />
+        <table style="width:5%;" align="center">
+             <tr>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+             <tr>
+                 <td>&nbsp;</td>
+                 <td align="center">&nbsp;<asp:Label runat="server" CssClass="Milabel" Text="Pagos"></asp:Label></td>
+                 <td>&nbsp;</td>
+             </tr>
+             <tr>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+         </table>
+        <br />
+        <br />
+        <br />
         <div>
+            <table style="border-style: outset;width:60%; background-color: #008080;" align="center">
+             <tr>
+                 <td >&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+             <tr>
+                 <td>&nbsp;</td>
+                 <td align="center"><asp:ImageButton runat="server"></asp:ImageButton></td>
+                 <td>&nbsp;</td>
+             </tr>
+             <tr>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+         </table>
         </div>
     </form>
 </body>

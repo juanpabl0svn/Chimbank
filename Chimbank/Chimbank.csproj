@@ -68,8 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ajustes\AjustesMenu.aspx" />
+    <Content Include="Credito\PagarCredito.aspx" />
     <Content Include="Credito\Solicitar.aspx" />
-    <Content Include="Credito\AbonarCredito.aspx" />
     <Content Include="Credito\CreditoMenu.aspx" />
     <Content Include="Diseños\ImgBanco.png" />
     <Content Include="Diseños\ImgCredito.png" />
@@ -78,6 +78,8 @@
     <Content Include="Diseños\StyleSheet1.css" />
     <Content Include="Diseños\StyleSheet2.css" />
     <Content Include="Diseños\ImgMovimientos.png" />
+    <Content Include="CambairClave.aspx" />
+    <Content Include="Pagos\IngresarDinero.aspx" />
     <Content Include="Transferencia\Movimientos.aspx" />
     <Content Include="Transferencia\HacerTransferencia.aspx" />
     <Content Include="Pagos\PagosMenu.aspx" />
@@ -90,19 +92,19 @@
     <Content Include="Iniciar.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credito\PagarCredito.aspx.cs">
+      <DependentUpon>PagarCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Credito\PagarCredito.aspx.designer.cs">
+      <DependentUpon>PagarCredito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Credito\Solicitar.aspx.cs">
       <DependentUpon>Solicitar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Credito\Solicitar.aspx.designer.cs">
       <DependentUpon>Solicitar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Credito\AbonarCredito.aspx.cs">
-      <DependentUpon>AbonarCredito.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Credito\AbonarCredito.aspx.designer.cs">
-      <DependentUpon>AbonarCredito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Credito\CreditoMenu.aspx.cs">
       <DependentUpon>CreditoMenu.aspx</DependentUpon>
@@ -111,6 +113,13 @@
     <Compile Include="Credito\CreditoMenu.aspx.designer.cs">
       <DependentUpon>CreditoMenu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CambairClave.aspx.cs">
+      <DependentUpon>CambairClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambairClave.aspx.designer.cs">
+      <DependentUpon>CambairClave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\Conexion.cs" />
     <Compile Include="Ajustes\AjustesMenu.aspx.cs">
       <DependentUpon>AjustesMenu.aspx</DependentUpon>
@@ -118,6 +127,13 @@
     </Compile>
     <Compile Include="Ajustes\AjustesMenu.aspx.designer.cs">
       <DependentUpon>AjustesMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\IngresarDinero.aspx.cs">
+      <DependentUpon>IngresarDinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagos\IngresarDinero.aspx.designer.cs">
+      <DependentUpon>IngresarDinero.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transferencia\Movimientos.aspx.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>

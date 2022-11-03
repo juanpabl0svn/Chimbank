@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class Pays
+    public partial class PagosMenu
     {
 
         /// <summary>

@@ -19,7 +19,7 @@
     </ul>
     <form id="form1" runat="server">
         <div>
-            <table style="width:100%;">
+            <table style="border-style: outset;width:100%;">
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

@@ -25,7 +25,7 @@
 
     <form id="form1" runat="server">
         <div>
-            <table style="width:60%; background-color: #008080;" align="center">
+            <table style="border-style: outset; width:60%; background-color: #008080;" align="center">
                 
                 <tr>
                     <td>&nbsp;</td>
@@ -62,7 +62,7 @@
             <br />
             <br />
             <br />
-            <table style="width:60%; background-color: #008080;" align="center">
+            <table style="border-style: outset;width:60%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;<asp:ImageButton runat="server" OnClick="Unnamed2_Click"></asp:ImageButton></td>
                     <td align="center">

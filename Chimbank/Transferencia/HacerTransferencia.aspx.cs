@@ -120,7 +120,7 @@ namespace Chimbank
             {
                 if (chGuardar.Checked)
                 {
-                    if (conectar.CuentaExisteGuardar(txtNumeroCuenta.Text, txtNit.Text))
+                    if (!conectar.CuentaExisteGuardar(txtNumeroCuenta.Text, txtNit.Text))
                     {
                         conectar.GuardarFavorito(txtNumeroCuenta.Text, txtNit.Text, txtNombre.Text);
 

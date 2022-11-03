@@ -31,7 +31,7 @@
     <br />
     <form id="form1" runat="server">
         <div>
-            <table style="width:60%; background-color: #008080;" align="center">
+            <table style="border-style: outset;width:60%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;</td>
                     <td align="center">
@@ -91,7 +91,7 @@
 
             <br />
             <br />
-            <table style="width:80%; background-color: #008080;" align="center">
+            <table style="border-style: outset;width:80%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
@@ -111,8 +111,8 @@
                 <tr align="center">
                     <td align="center"> 
                         <asp:Label runat="server" CssClass="text" Text="Transferir"  ></asp:Label></td>
-                    <td align="center"><asp:Label runat="server" CssClass="Label" Text="Ver movimientos"></asp:Label></td>
-                    <td align="center"><asp:Label runat="server" CssClass="Label" Text="Pagar credito"></asp:Label></td>
+                    <td align="center"><asp:Label runat="server" CssClass="text" Text="Ver movimientos"></asp:Label></td>
+                    <td align="center"><asp:Label runat="server" CssClass="text" Text="Pagar credito"></asp:Label></td>
 
                 </tr>
                 
