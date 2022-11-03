@@ -17,46 +17,132 @@ namespace Chimbank
         Conexion BD = new Conexion();
 
 
-        //Iniciar sesion
-        protected void btnIniciar_Click(object sender, EventArgs e)
+
+        public bool EsapciosVacios()
         {
-            lblError.Visible = false;
-            if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrWhiteSpace(txtUsuario.Text))
+            
+            if (String.IsNullOrEmpty(txtNumeroCuenta.Text) || String.IsNullOrWhiteSpace(txtNumeroCuenta.Text))
             {
                 lblError.Visible = true;
-                lblError.Text = "Ingrese su usuario";
+                lblError.Text = "Ingrese su numero de cuenta ";
+                return true;
 
 
+            }
+            else if (String.IsNullOrEmpty(txtNit.Text) || String.IsNullOrWhiteSpace(txtNit.Text))
+            {
+                lblError.Visible = true;
+                lblError.Text = "Ingrese su identificacion";
+                return true;
             }
             else if (String.IsNullOrEmpty(txtCorreo.Text) || String.IsNullOrWhiteSpace(txtCorreo.Text))
             {
                 lblError.Visible = true;
-                lblError.Text = "Ingrese su contraseña";
-
+                lblError.Text = "Ingrese su correo";
+                return true;
             }
-            else if (String.IsNullOrEmpty(BD.BuscarUsuario(txtUsuario.Text, txtCorreo.Text)))
+            else if (String.IsNullOrEmpty(txtClave.Text) || String.IsNullOrWhiteSpace(txtClave.Text))
             {
                 lblError.Visible = true;
-                lblError.Text = "Usuario o contraseña incorrectos";
-
+                lblError.Text = "Ingrese su nueva contraseña";
+                return true;
             }
-            else
+            else if (String.IsNullOrEmpty(txtclaveConfirmar.Text) || String.IsNullOrWhiteSpace(txtclaveConfirmar.Text))
             {
-                BD.InfoUsuario(BD.BuscarUsuario(txtUsuario.Text, txtCorreo.Text));
-                Response.Redirect("/Inicio/Principal.aspx");
+                lblError.Visible = true;
+                lblError.Text = "Confirme contraseña";
+                return true;
+            }
+                return false;
+
+        }
+
+        public bool Contraseña_poco_segura()
+        {
+            bool numero = false;
+
+            bool mayus = false;
+
+            foreach (char car in txtClave.Text)
+            {
+                if (Char.IsUpper(car))
+                {
+                    mayus = true;
+                }
+
 
             }
+            foreach (char car in txtClave.Text)
+            {
+                if (Char.IsNumber(car))
+                {
+                    numero = true;
+                }
+
+            }
+            if (txtClave.Text.Length < 7)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Contraseña poco segura, ingrese mas de 7 dígitos";
+
+                return true;
+
+            }
+            if (!numero)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Contraseña poco segura, ingrese almenos un digito";
+
+                return true;
+
+            }
+            if (!mayus)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Contraseña poco segura, ingrese almenos una mayuscula";
+
+                return true;
+
+            }
+
+
+            return false;
 
         }
 
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            lblError.Visible = false;
+
+            if (EsapciosVacios())
+            {
+
+            }
+            else if (Contraseña_poco_segura())
+            {
+
+            }
+            else if (txtClave.Text != txtclaveConfirmar.Text)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Las claves no son iguales";
+
+            }
+            else if (BD.CuentaYaExiste(int.Parse(txtNumeroCuenta.Text)) && BD.UsuarioYaExisteCorreo(txtCorreo.Text) && BD.UsuarioYaExisteId(txtNit.Text))
+            {
+                BD.Cambiar_contraseña(txtClave.Text, txtNumeroCuenta.Text, txtNit.Text, txtCorreo.Text);
+                BD.InfoUsuario(BD.BuscarUsuario(txtCorreo.Text, txtClave.Text));
+                Response.Redirect("/Inicio/Principal.aspx");
+
+            }
+
 
         }
 
         protected void btnSalir_Click(object sender, EventArgs e)
         {
+            Response.Redirect("/Iniciar.aspx");
 
         }
     }

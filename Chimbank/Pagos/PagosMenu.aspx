@@ -50,14 +50,16 @@
              </tr>
              <tr>
                  <td>&nbsp;</td>
-                 <td align="center"><asp:ImageButton runat="server"></asp:ImageButton></td>
+                 <td align="center">
+                     <asp:ImageButton runat="server" ID="ImgbtnIngresarDinero" Height="111px" Width="147" ImageUrl="~/Diseños/ImgIngresarDinero.png" OnClick="ImgbtnIngresarDinero_Click"></asp:ImageButton></td>
                  <td>&nbsp;</td>
              </tr>
              <tr>
                  <td>&nbsp;</td>
-                 <td>&nbsp;</td>
+                 <td align="center"><asp:Label ID="Label1" CssClass="text" runat="server" Text="Ingresar dinero"></asp:Label></td>
                  <td>&nbsp;</td>
              </tr>
+                
          </table>
         </div>
     </form>

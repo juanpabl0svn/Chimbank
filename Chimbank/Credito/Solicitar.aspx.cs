@@ -12,7 +12,7 @@ namespace Chimbank
     {
         Conexion conexion = new Conexion();
 
-        static Dictionary<string, double> interes = new Dictionary<string, double>() { { "12", 0.91 }, { "24",1.02}, {"32",1.13 } };
+        static Dictionary<string, double> interes = new Dictionary<string, double>() { { "12", 0.91 }, { "24",1.02}, {"36",1.13 } };
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,13 +20,13 @@ namespace Chimbank
 
         protected void btnAdquirirCredito_Click(object sender, EventArgs e)
         {
-            if (conexion.Transacciones().Length > 10)
+            
+            if (conexion.ValorTransferencias() > 10000000)
             {
-                if (Usuario.user.Credito < 0)
+                if (Usuario.user.Credito > 0)
                 {
                     lblError.Visible = true;
                     lblError.ForeColor = Color.Red;
-
                     lblError.Text = "Tiene activo un credito actualmente, vuelva cuando no este activo";
 
                 }
@@ -44,6 +44,10 @@ namespace Chimbank
 
                         lblError.Text = "Credito exitoso";
 
+                        Usuario.user.Credito = nuevo_credito;
+
+                        Usuario.user.Dinero += double.Parse(txtvalorCredito.Text);
+
                     }
                     else
                     {
@@ -51,6 +55,8 @@ namespace Chimbank
                         lblError.ForeColor = Color.Red;
 
                         lblError.Text = "Ingrese un valor valido";
+
+                        
 
                     }
 
@@ -63,7 +69,7 @@ namespace Chimbank
                 lblError.Visible = true;
                 lblError.ForeColor = Color.Red;
                 
-                lblError.Text = "No posee con las transferencia necesarias para adquirir prestamo (min 10)";
+                lblError.Text = "No has tenido mas de $10´000.000 en tu cuenta como minimo";
 
             }
 

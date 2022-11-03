@@ -43,7 +43,7 @@ namespace Chimbank
 
         protected void imgbtnCredito_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("/Credito/AbonarCredito.aspx");
+            Response.Redirect("/Credito/PagarCredito.aspx");
 
         }
     }

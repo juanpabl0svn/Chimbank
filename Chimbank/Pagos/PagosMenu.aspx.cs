@@ -13,5 +13,11 @@ namespace Chimbank
         {
 
         }
+
+        protected void ImgbtnIngresarDinero_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("/Pagos/IngresarDinero.aspx");
+
+        }
     }
 }

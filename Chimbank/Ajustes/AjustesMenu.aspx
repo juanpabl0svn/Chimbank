@@ -18,6 +18,12 @@
 
     </ul>
     <form id="form1" runat="server">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <div>
             <table style="width:100%;">
                 <tr>
@@ -34,8 +40,48 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
                     <td align="center">
                         <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Diseños/ImgSalir.png" OnClick="ImageButton1_Click" Height="118px" Width="137px" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="center">
+                        <asp:Label ID="Label2" CssClass="text" runat="server" Text="Salir"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

@@ -66,6 +66,9 @@
             </table>
             <br />
             <br />
+            <br />
+    <br />
+    <br />
 
             <table style="width:100%;">
                 <tr>
@@ -91,6 +94,15 @@
 
             <br />
             <br />
+            <br />
+    <br />
+    <br />
+            <br />
+    <br />
+    <br />
+            <br />
+    <br />
+    <br />
             <table style="border-style: outset;width:80%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;</td>
@@ -105,7 +117,7 @@
                         <asp:ImageButton ID="imgbtnVerMovimientos" runat="server" Height="112px" ImageUrl="~/Diseños/ImgMovimientos.png" OnClick="imgbtnVerMovimientos_Click" Width="173px" />
                     </td>
                     <td align="center">
-                        <asp:ImageButton ID="imgbtnCredito" runat="server" Height="111px" ImageUrl="~/Diseños/ImgCredito.png" OnClick="imgbtnCredito_Click" Width="147px" />
+                        <asp:ImageButton ID="imgbtnCredito" runat="server" Height="111px" ImageUrl="~/Diseños/ImgPagar.png" OnClick="imgbtnCredito_Click" Width="147px" />
                     </td>
                 </tr>
                 <tr align="center">

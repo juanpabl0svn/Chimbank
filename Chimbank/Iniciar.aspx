@@ -46,8 +46,7 @@
         </table>
     <br />
     <br />
-    <br />
-    <br />
+
 
        <table style="border-style: outset; width:40%; background-color: #008080;" align="center" class="auto-style7">
                             <tr>
@@ -110,6 +109,13 @@
                                 <td class="auto-style1"></td>
                                 <td class="auto-style5" align="center">
                                     &nbsp;</td>
+                                <td class="auto-style6"></td>
+                            </tr>
+           <tr>
+                                <td class="auto-style1"></td>
+                                <td class="auto-style5" align="center">
+                                    <asp:HyperLink ID="linkOlvidarclave" runat="server" NavigateUrl="~/CambairClave.aspx">¿Olvidaste tu contraseña?</asp:HyperLink>
+                                </td>
                                 <td class="auto-style6"></td>
                             </tr>
                             <tr>

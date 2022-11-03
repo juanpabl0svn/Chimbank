@@ -21,6 +21,44 @@
         <br />
         <br />
         <br />
+        <table style="border-style: outset; width:60%; background-color: #008080;" align="center">
+                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="center"><asp:Label runat="server" Text="Credito actual:" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
+                    </td>
+                    <td align="center"><asp:Label runat="server" Text="" ID="lblCredito" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
+                    </td>
+                    <td align="right">
+                        
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="center"><asp:Label runat="server" Text="Dinero actual:" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
+                    </td>
+                    <td align="center"><asp:Label runat="server" Text="" ID="lblDinero" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="auto-style1">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td align="right">
+                        
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                </table>
+        <br />
+        <br />
+        <br />
         <table style="width:60%;" align="center">
              <tr>
                  <td>&nbsp;</td>

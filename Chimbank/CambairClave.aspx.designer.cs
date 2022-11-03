@@ -51,15 +51,6 @@ namespace Chimbank
         protected global::System.Web.UI.WebControls.TextBox txtNumeroCuenta;
 
         /// <summary>
-        /// lblErrorYaexiste control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorYaexiste;
-
-        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -76,15 +67,6 @@ namespace Chimbank
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNit;
-
-        /// <summary>
-        /// lblErrorApellidoVacio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorApellidoVacio;
 
         /// <summary>
         /// Label5 control.
@@ -105,13 +87,13 @@ namespace Chimbank
         protected global::System.Web.UI.WebControls.TextBox txtCorreo;
 
         /// <summary>
-        /// lblErrorContraseña control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorContraseña;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// Label4 control.
@@ -132,15 +114,6 @@ namespace Chimbank
         protected global::System.Web.UI.WebControls.TextBox txtClave;
 
         /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -157,15 +130,6 @@ namespace Chimbank
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtclaveConfirmar;
-
-        /// <summary>
-        /// lblErrorTC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorTC;
 
         /// <summary>
         /// Button1 control.

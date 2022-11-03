@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <link href ="/Design/StyleSheet2.css" rel="stylesheet" type="text/css" />
+     <link href ="/Diseños/TerYCond.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -42,7 +42,7 @@
         <strong style="box-sizing: border-box; font-weight: bold; font-family: OpenSans-Extrabold;">El presente documento tendrá validez desde su aceptación de los términos y condiciones marcando el check de aceptación electrónica del formulario de solicitud, durante la vigencia de la relación del Cliente con el BANCO PICHINCHA y/o de quien en el futuro represente sus derechos, u ostente los derechos y/u obligaciones a cargo de BANCO PICHINCHA, y en general por el término establecido en la Ley.</strong></p>
 
     <form id="form1" runat="server">
-        <div>
+        <div align="center">
 
             <asp:Button ID="btnVolver" CssClass="button" runat="server" Text="Volver" OnClick="btnVolver_Click" />
 

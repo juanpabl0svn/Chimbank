@@ -35,6 +35,7 @@ namespace Chimbank
             }
         }
 
+        //Crea nuevo usuario
         public void Insertar(string nit, string numero_cuenta, string nombre, string apellido, string correo, string clave)
         {
 
@@ -247,7 +248,7 @@ namespace Chimbank
 
         }
 
-
+        //Crea el registro del movimiento
         public void CrearMovimiento(string recibido, double valor)
         {
 
@@ -256,6 +257,7 @@ namespace Chimbank
 
         }
 
+        //Existe una cuenta a la cual se le pueda transferir el dinero
         public bool CuentaExisteTransferir(string numero_cuenta, string nit)
         {
             bool encontrado = false;
@@ -274,6 +276,7 @@ namespace Chimbank
 
         }
 
+        //La cuenta que se desea guardar ya existe en favoritos
         public bool CuentaExisteGuardar(string numero_cuenta, string nit)
         {
             bool encontrado = false;
@@ -292,6 +295,7 @@ namespace Chimbank
 
         }
 
+        //Guarda en los favoritos del usuario
         public void GuardarFavorito(string numero_cuenta, string nit, string nombre)
         {
 
@@ -300,9 +304,9 @@ namespace Chimbank
 
         }
 
+        //Hace el credito
         public void HacerCredito(double nuevo_credito, double prestamo)
         {
-            
             
             cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "', dinero = '"+(Usuario.user.Dinero + prestamo)+"' where numero_cuenta = '" + Usuario.user.Numero_cuenta + "'", cn);
             cmd.ExecuteNonQuery();
@@ -311,6 +315,7 @@ namespace Chimbank
 
         }
 
+        //Paga parte o totalidad del credito
         public void PagarCredito(double valor_pagar, double nuevo_credito)
         {
             cmd = new SqlCommand("UPDATE dbo.usuario SET credito='" + nuevo_credito + "', dinero = '"+(Usuario.user.Dinero - valor_pagar)+"' " +
@@ -318,13 +323,14 @@ namespace Chimbank
             cmd.ExecuteNonQuery();
         }
 
-
+        //Cambiar contraseña
         public void Cambiar_contraseña(string Nueva_clave, string cuenta, string nit, string correo)
         {
             cmd = new SqlCommand("UPDATE dbo.usuario SET clave='" + Nueva_clave + "' where numero_cuenta = '" + cuenta + "' AND correo = '" + correo + "' AND nit = '" + nit + "'", cn);
             cmd.ExecuteNonQuery();
         }
 
+        //Agrega dinero
         public void AgregarDinero(double nuevo_dinero)
         {
             Usuario.user.Dinero += nuevo_dinero;
@@ -333,6 +339,24 @@ namespace Chimbank
 
         }
 
+        public double ValorTransferencias()
+        {
+            double dinero = 0;
+            cmd = new SqlCommand("Select * from dbo.movimientos where enviado = '" + Usuario.user.Numero_cuenta + "' OR recibido = '" + Usuario.user.Numero_cuenta + "'", cn);
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+
+                dinero += double.Parse(rdr["valor"].ToString());
+
+            }
+
+            rdr.Close();
+
+            return dinero;
+
+        }
 
              
 

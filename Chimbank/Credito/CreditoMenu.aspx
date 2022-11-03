@@ -29,9 +29,9 @@
                 
                 <tr>
                     <td>&nbsp;</td>
-                    <td align="center"><asp:Label runat="server" Text="Credito actual: "></asp:Label>
+                    <td align="center"><asp:Label runat="server" Text="Credito actual:" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
                     </td>
-                    <td align="center"><asp:Label runat="server" Text="" ID="lblCredito"></asp:Label>
+                    <td align="center"><asp:Label runat="server" Text="" ID="lblCredito" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
                     </td>
                     <td align="right">
                         
@@ -64,23 +64,24 @@
             <br />
             <table style="border-style: outset;width:60%; background-color: #008080;" align="center">
                 <tr>
-                    <td>&nbsp;<asp:ImageButton runat="server" OnClick="Unnamed2_Click"></asp:ImageButton></td>
+                    <td align="center">&nbsp;<asp:ImageButton runat="server" OnClick="Unnamed2_Click" ID="btnPagarCredito" Height="111px" Width="147" ImageUrl="~/Diseños/ImgPagar.png"></asp:ImageButton></td>
                     <td align="center">
                     </td>
                     <td>&nbsp;</td>
-                    <td align="right">
-                        <asp:ImageButton runat="server"></asp:ImageButton>
+                    <td align="center">
+                        <asp:ImageButton runat="server" ID="btnPedirCredito" Height="111px" Width="147" ImageUrl="~/Diseños/ImgCredito.png" OnClick="btnPedirCredito_Click"></asp:ImageButton>
                         
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style1"></td>
+                    <td align="center">
+                        <asp:Label runat="server" CssClass="text" Text="Pagar cuota"></asp:Label></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td align="center">&nbsp;<asp:Label runat="server" CssClass="text" Text="Pedir credito"></asp:Label></td>
+                    <td >&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

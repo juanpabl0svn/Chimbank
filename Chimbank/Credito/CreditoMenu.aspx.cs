@@ -14,12 +14,17 @@ namespace Chimbank
         {
             lblCredito.Text = "$ " + Usuario.user.Credito.ToString("0,0.0", CultureInfo.InvariantCulture);
 
-
-
         }
 
         protected void Unnamed2_Click(object sender, ImageClickEventArgs e)
         {
+            Response.Redirect("/Credito/PagarCredito.aspx");
+
+        }
+
+        protected void btnPedirCredito_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("/Credito/Solicitar.aspx");
 
         }
     }

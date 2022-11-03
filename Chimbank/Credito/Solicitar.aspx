@@ -44,14 +44,19 @@
         <div>
             <table style="border-style: outset;width:60%; background-color: #008080;" align="center">
              <tr>
-                 <td>&nbsp;<asp:Label runat="server" Text="Valor del credito: "></asp:Label></td>
+                 <td>&nbsp;<asp:Label runat="server" Text="Valor del credito"></asp:Label></td>
                  <td>&nbsp;<asp:TextBox runat="server" ID="txtvalorCredito"></asp:TextBox></td>
                  <td>&nbsp;</td>
              </tr>
                 <tr>
-                 <td>&nbsp;<asp:Label runat="server" Text="¿A cuantos meses? : "></asp:Label></td>
-                 <td>&nbsp;<asp:DropDownList runat="server" ID="ddlMeses" ></asp:DropDownList>></td>
-                 <td>&nbsp;</td>
+                 <td>&nbsp;<asp:Label runat="server" Text="¿A cuantos meses? "></asp:Label></td>
+                 <td>&nbsp;<asp:DropDownList runat="server" ID="ddlMeses" >
+                            <asp:ListItem>12</asp:ListItem>
+                            <asp:ListItem>24</asp:ListItem>
+                            <asp:ListItem>36</asp:ListItem>
+                   
+                           </asp:DropDownList></td>
+                 <td></td>
              </tr>
              <tr>
                  <td>&nbsp;</td>
@@ -59,7 +64,7 @@
                  <td>&nbsp;<asp:Label runat="server" ForeColor="Red" Text="Label" Visible="False" ID="lblError"></asp:Label></td>
              </tr>
              <tr>
-                 <td>&nbsp;<asp:Button runat="server" CssClass="button" Text="Abonar" ID="btnAbonar" OnClick="btnAdquirirCredito_Click"></asp:Button></td>
+                 <td>&nbsp;<asp:Button runat="server" CssClass="button" Text="Solicitar" ID="btnAbonar" OnClick="btnAdquirirCredito_Click"></asp:Button></td>
                  <td>&nbsp;</td>
                  <td>&nbsp;</td>
              </tr>

@@ -73,8 +73,11 @@
     <Content Include="Credito\CreditoMenu.aspx" />
     <Content Include="Diseños\ImgBanco.png" />
     <Content Include="Diseños\ImgCredito.png" />
+    <Content Include="Diseños\ImgIngresarDinero.png" />
+    <Content Include="Diseños\ImgPagar.png" />
     <Content Include="Diseños\ImgSalir.png" />
     <Content Include="Diseños\ImgTransferir.png" />
+    <Content Include="Diseños\TerYCond.css" />
     <Content Include="Diseños\StyleSheet1.css" />
     <Content Include="Diseños\StyleSheet2.css" />
     <Content Include="Diseños\ImgMovimientos.png" />
