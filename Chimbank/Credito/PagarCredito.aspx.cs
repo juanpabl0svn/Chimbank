@@ -12,17 +12,27 @@ namespace Chimbank
     public partial class PagarCredito : System.Web.UI.Page
     {
         Conexion conexion = new Conexion();
+
+        //Trae la informacion del usuario
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblCredito.Text = "$ " + Usuario.user.Credito.ToString("0,0.0", CultureInfo.InvariantCulture);
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+            }
+            else
+            {
+                lblCredito.Text = "$ " + Usuario.user.Credito.ToString("0,0.0", CultureInfo.InvariantCulture);
 
-            lblDinero.Text = "$ " + Usuario.user.Dinero.ToString("0,0.0", CultureInfo.InvariantCulture);
+                lblDinero.Text = "$ " + Usuario.user.Dinero.ToString("0,0.0", CultureInfo.InvariantCulture);
+            }
 
 
 
 
         }
 
+        //Pagar credito
         protected void btnAbonar_Click(object sender, EventArgs e)
         {
             if (Usuario.user.Credito > 0)
@@ -54,6 +64,7 @@ namespace Chimbank
                         double nuevo_credito = Usuario.user.Credito - double.Parse(txtDineroAbonar.Text);
 
                         conexion.PagarCredito(double.Parse(txtDineroAbonar.Text), nuevo_credito);
+
                         lblError.Visible = true;
                         lblError.ForeColor = Color.Green;
                         lblError.Text = "Cuota pagada con exito";

@@ -14,6 +14,7 @@ namespace Chimbank
 
         }
 
+        //Volver a registrar usuario
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Registrar/RegistrarMenu.aspx");

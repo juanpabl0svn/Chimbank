@@ -179,7 +179,7 @@ namespace Chimbank
         //Retorna el numero de las cuentas guardads por el usuario
         public List<string> MostrarFavoritos()
         {
-            List<string> favoritos = new List<string>();
+            List <string> favoritos = new List <string>();
             cmd = new SqlCommand("Select * from dbo.cuentas_guardadas where usuario = '" + Usuario.user.Numero_cuenta + "'", cn);
             rdr = cmd.ExecuteReader();
 

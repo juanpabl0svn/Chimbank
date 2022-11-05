@@ -12,7 +12,15 @@ namespace Chimbank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblCredito.Text = "$ " + Usuario.user.Credito.ToString("0,0.0", CultureInfo.InvariantCulture);
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+            }
+            else
+            {
+                
+                lblCredito.Text = "$ " + Usuario.user.Credito.ToString("0,0.0", CultureInfo.InvariantCulture);
+            }
 
         }
 

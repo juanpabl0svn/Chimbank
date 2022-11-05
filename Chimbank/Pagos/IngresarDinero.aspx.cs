@@ -13,17 +13,34 @@ namespace Chimbank
         Conexion conexion = new Conexion();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+            }
+            
         }
 
+        //Ingresar dinero a la cuenta
         protected void btnIngresarDinero_Click(object sender, EventArgs e)
         {
             if (double.TryParse(txtDineroIngresar.Text, out _))
             {
-                conexion.AgregarDinero(double.Parse(txtDineroIngresar.Text));
-                lblError.Visible = true;
-                lblError.ForeColor = Color.Green;
-                lblError.Text = "Dinero correctamente ingresado";
+                if (double.Parse(txtDineroIngresar.Text) < 10000000)
+                {
+                    conexion.AgregarDinero(double.Parse(txtDineroIngresar.Text));
+                    lblError.Visible = true;
+                    lblError.ForeColor = Color.Green;
+                    lblError.Text = "Dinero correctamente ingresado";
+
+                }
+                else
+                {
+                    lblError.Visible = true;
+                    lblError.ForeColor = Color.Red;
+                    lblError.Text = "No se puede ingresar tal cantidad de dinero, menos de 10 millones";
+
+                }
+                
 
             }
             else

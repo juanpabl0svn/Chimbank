@@ -21,6 +21,7 @@ namespace Chimbank
         protected void btnIniciar_Click(object sender, EventArgs e)
         {
             lblError.Visible = false;
+
             if (String.IsNullOrEmpty(txtUsuario.Text) || String.IsNullOrWhiteSpace(txtUsuario.Text))
             {
                 lblError.Visible = true;

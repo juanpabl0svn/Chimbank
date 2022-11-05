@@ -17,7 +17,7 @@ namespace Chimbank
         Conexion BD = new Conexion();
 
 
-
+        //Tiene espacios en blanco
         public bool EsapciosVacios()
         {
             
@@ -57,6 +57,7 @@ namespace Chimbank
 
         }
 
+        //Verificar si la clave es segura
         public bool Contraseña_poco_segura()
         {
             bool numero = false;
@@ -110,7 +111,7 @@ namespace Chimbank
 
         }
 
-
+        //Cambiar clave
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             lblError.Visible = false;
@@ -140,6 +141,7 @@ namespace Chimbank
 
         }
 
+        //Salir
         protected void btnSalir_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Iniciar.aspx");

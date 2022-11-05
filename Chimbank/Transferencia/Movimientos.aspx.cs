@@ -10,9 +10,25 @@ namespace Chimbank
     public partial class Movements : System.Web.UI.Page
     {
         Conexion conexion = new Conexion();
+
+        //Imprime los moviminentos guardados en la base de datos
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtboxMovimientos.Text = conexion.Transacciones().ToString();
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+            }
+            else
+            {
+                if (txtboxMovimientos.Text == "")
+                {
+                    txtboxMovimientos.Text = conexion.Transacciones().ToString();
+
+                }
+                
+
+            }
+            
 
 
         }

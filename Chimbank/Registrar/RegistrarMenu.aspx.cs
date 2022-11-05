@@ -96,12 +96,96 @@ namespace Chimbank
 
         }
 
+        //Revisa errores en el id de la persona
+        public bool ErroresId()
+        {
+            string prohibido = "!\"·$%&/()´¨[{]}#¿=¿¡?'_:;,|@#€*+.";
+            foreach (char car in txtNombre.Text)
+            {
+                if (prohibido.Contains(car))
+                {
+                    lblErrorYaexiste.Visible = true;
+                    lblErrorYaexiste.Text = "Quitar caracteres espciales";
+
+                    return true;
+
+                }
+
+                if (txtId.Text.Length < 9)
+                {
+                    lblErrorYaexiste.Visible = true;
+                    lblErrorYaexiste.Text = "id real, mas de 8 digitos";
+                    return true;
+                }
+
+            }
+
+            return false;
+
+        }
+        
+        //Revisa errores en el nombre
+        public bool ErroresNombres()
+        {
+            string prohibido = "!\"·$%&/()´¨[{]}#¿=¿¡?'_:;,|@#€*+.1234567890";
+            foreach (char car in txtNombre.Text)
+            {
+                if (prohibido.Contains(car))
+                {
+                    lblErrorNombreVacio.Visible = true;
+                    lblErrorNombreVacio.Text = "Quitar caracteres espciales o numeros";
+
+                    return true;
+
+                }
+
+            }
+
+            if (txtNombre.Text.Length < 3)
+            {
+                lblErrorNombreVacio.Visible = true;
+                lblErrorNombreVacio.Text = "Nombre real, mas de dos letras";
+                return true;
+            }
+
+            return false;
+
+        }
+
+        //Revisa errores en el apellido
+        public bool ErroresApellido()
+        {
+            string prohibido = "!\"·$%&/()´¨[{]}#¿=¿¡?'_:;,|@#€*+.1234567890";
+            foreach (char car in txtApellido.Text)
+            {
+                if (prohibido.Contains(car))
+                {
+                    lblErrorApellidoVacio.Visible = true;
+                    lblErrorApellidoVacio.Text = "Quitar caracteres espciales o numeros";
+
+                    return true;
+
+                }
+
+            }
+
+            if (lblErrorApellidoVacio.Text.Length < 3)
+            {
+                lblErrorApellidoVacio.Visible = true;
+                lblErrorApellidoVacio.Text = "Apellido real, mas de dos letras";
+                return true;
+            }
+
+            return false;
+
+        }
+
         //Si el correo no es de gmail, no puede registrarse
         public bool Correo_invalido()
         {
             string correo = txtCorreo.Text;
 
-            if (correo.ToLower().Contains("@gmail.com"))
+            if (correo.ToLower().Contains("@gmail.com") || correo.ToLower().Contains("@hotmail.com") || correo.ToLower().Contains("@yahoo.es") || correo.ToLower().Contains("@outlook.com"))
             {
                 return false;
             }
@@ -135,6 +219,7 @@ namespace Chimbank
                 }
 
             }
+
             if (txtContraseña.Text.Length < 7)
             {
                 lblErrorContraseña.Visible = true;
@@ -174,6 +259,18 @@ namespace Chimbank
             {
 
             }
+            else if (ErroresId())
+            {
+
+            }
+            else if (ErroresNombres())
+            {
+
+            }
+            else if (ErroresApellido())
+            {
+
+            }
             else if (!int.TryParse(txtId.Text, out _))
             {
                 lblErrorYaexiste.Visible = true;
@@ -188,7 +285,7 @@ namespace Chimbank
             else if (Correo_invalido())
             {
                 lblErrorCorreoInvalido.Visible = true;
-                lblErrorCorreoInvalido.Text = "Ingrese un correo valido de gmail";
+                lblErrorCorreoInvalido.Text = "Ingrese un correo electronico valido";
             }
             else if (BD.UsuarioYaExisteCorreo(txtCorreo.Text))
             {
@@ -208,7 +305,7 @@ namespace Chimbank
             else if (!chConfirmar.Checked)
             {
                 lblErrorTC.Visible = true;
-                lblErrorTC.Text = "Acepte terminos y condiciones";
+                lblErrorTC.Text = "Aceptar terminos y condiciones";
 
 
             }

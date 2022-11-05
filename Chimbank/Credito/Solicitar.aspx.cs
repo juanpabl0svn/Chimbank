@@ -12,16 +12,24 @@ namespace Chimbank
     {
         Conexion conexion = new Conexion();
 
-        static Dictionary<string, double> interes = new Dictionary<string, double>() { { "12", 0.91 }, { "24",1.02}, {"36",1.13 } };
+        static Dictionary <string, double> interes = new Dictionary<string, double>() { { "12", 0.91 }, { "24",1.02}, {"36",1.13 } };
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+            }
+            
+
+
 
         }
 
+        //Pedir credito
         protected void btnAdquirirCredito_Click(object sender, EventArgs e)
         {
             
-            if (conexion.ValorTransferencias() > 10000000)
+            if (conexion.ValorTransferencias() >= 10000000)
             {
                 if (Usuario.user.Credito > 0)
                 {

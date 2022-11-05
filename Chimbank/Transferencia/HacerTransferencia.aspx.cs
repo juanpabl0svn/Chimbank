@@ -13,35 +13,46 @@ namespace Chimbank
 
         Conexion conectar = new Conexion();
 
+        //Agrega las cuentas favoritas del usuario
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<string> lista = new List<string>();
-
-            var cuentas_guardadas = conectar.MostrarFavoritos();
-
-
-            foreach (ListItem cuenta in ddlCuentas.Items)
+            if (Usuario.user.Nit == null)
             {
-                lista.Add(cuenta.ToString());
-
+                Response.Redirect("/Iniciar.aspx");
             }
-
-            foreach(string cuenta in cuentas_guardadas)
+            else
             {
-                if (!lista.Contains(cuenta))
+
+
+                List<string> lista = new List<string>();
+
+                var cuentas_guardadas = conectar.MostrarFavoritos();
+
+
+                foreach (ListItem cuenta in ddlCuentas.Items)
                 {
-                    ddlCuentas.Items.Add(cuenta);
+                    lista.Add(cuenta.ToString());
 
                 }
 
-            }
+                foreach (string cuenta in cuentas_guardadas)
+                {
+                    if (!lista.Contains(cuenta))
+                    {
+                        ddlCuentas.Items.Add(cuenta);
 
-            lista.Clear();
+                    }
+
+                }
+
+                lista.Clear();
+            }
 
 
 
         }
 
+        //Busca la info de la cuenta guardada
         protected void btnBuscarInfo_Click(object sender, EventArgs e)
         {
             if(ddlCuentas.SelectedItem.Text == "Seleccionar")
@@ -62,6 +73,7 @@ namespace Chimbank
 
         }
 
+        //Revisa si tiene espacios en blanco
         public bool Espacios_vacios()
         {
             if (String.IsNullOrEmpty(txtNit.Text) || String.IsNullOrWhiteSpace(txtNit.Text))
@@ -97,6 +109,7 @@ namespace Chimbank
 
         }
 
+        //Realiza la transferencia
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             if (Espacios_vacios())
