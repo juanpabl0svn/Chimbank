@@ -71,6 +71,7 @@
     <Content Include="Credito\PagarCredito.aspx" />
     <Content Include="Credito\Solicitar.aspx" />
     <Content Include="Credito\CreditoMenu.aspx" />
+    <Content Include="Diseños\ImgClave.png" />
     <Content Include="Diseños\ImgBanco.png" />
     <Content Include="Diseños\ImgCredito.png" />
     <Content Include="Diseños\ImgIngresarDinero.png" />

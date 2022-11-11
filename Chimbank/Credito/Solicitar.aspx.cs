@@ -29,7 +29,7 @@ namespace Chimbank
         protected void btnAdquirirCredito_Click(object sender, EventArgs e)
         {
             
-            if (conexion.ValorTransferencias() >= 10000000)
+            if (conexion.ValorTransferencias() >= 10000000 || Usuario.user.Dinero >= 10000000)
             {
                 if (Usuario.user.Credito > 0)
                 {
@@ -42,19 +42,31 @@ namespace Chimbank
                 {
                     if (double.TryParse(txtvalorCredito.Text, out _))
                     {
-                        double nuevo_credito = double.Parse(txtvalorCredito.Text) + (double.Parse(txtvalorCredito.Text) * interes[ddlMeses.SelectedItem.Text]);
 
-                        conexion.HacerCredito(nuevo_credito, double.Parse(txtvalorCredito.Text));
+                        if (double.Parse(txtvalorCredito.Text) >= 100000000)
+                        {
+                            lblError.Visible = true;
+                            lblError.ForeColor = Color.Red;
+                            lblError.Text = "El banco no tiene aun tantos recursos para prestar, intente un valor menor a $100´000.000";
 
-                        lblError.Visible = true;
+                        }
+                        else 
+                        {
+                            double nuevo_credito = double.Parse(txtvalorCredito.Text) + (double.Parse(txtvalorCredito.Text) * interes[ddlMeses.SelectedItem.Text]);
 
-                        lblError.ForeColor = Color.Green;
+                            conexion.HacerCredito(nuevo_credito, double.Parse(txtvalorCredito.Text));
 
-                        lblError.Text = "Credito exitoso";
+                            lblError.Visible = true;
 
-                        Usuario.user.Credito = nuevo_credito;
+                            lblError.ForeColor = Color.Green;
 
-                        Usuario.user.Dinero += double.Parse(txtvalorCredito.Text);
+                            lblError.Text = "Credito exitoso";
+
+                            Usuario.user.Credito = nuevo_credito;
+
+                            Usuario.user.Dinero += double.Parse(txtvalorCredito.Text);
+                        }
+                        
 
                     }
                     else

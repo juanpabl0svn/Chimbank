@@ -44,7 +44,7 @@
                                     <asp:Label ID="Label1" runat="server" Text="NIT"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtId" CssClass="textBox" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorYaexiste" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
        
@@ -55,7 +55,7 @@
                                     <asp:Label ID="Label2" runat="server" Text="Nombre"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtNombre" CssClass="textBox" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorNombreVacio" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
 
@@ -67,7 +67,7 @@
                                     <asp:Label ID="Label3" runat="server" Text="Apellido"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtApellido" CssClass="textBox" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorApellidoVacio" runat="server" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
   
@@ -80,7 +80,7 @@
                                     <asp:Label ID="Label4" runat="server" Text="Correo"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtCorreo" CssClass="textBox" runat="server"></asp:TextBox>
                                     <asp:Label ID="lblErrorCorreoInvalido" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
     
@@ -91,7 +91,7 @@
                                     <asp:Label ID="Label5" runat="server" Text="Contraseña"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" show="*"></asp:TextBox>
+                                    <asp:TextBox ID="txtContraseña" CssClass="textBox" runat="server" TextMode="Password" show="*"></asp:TextBox>
                                     <asp:Label ID="lblErrorContraseña" runat="server" ClientIDMode="Predictable" Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
    
@@ -102,7 +102,7 @@
                                     <asp:Label ID="Label6" runat="server" Text="Confirmar contraseña"></asp:Label>
                                 </td>
                                 <td >
-                                    <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="txtConfirmarContraseña" CssClass="textBox" runat="server" TextMode="Password"></asp:TextBox>
                                     <asp:Label ID="lblErrorContraseñaConfirmar" runat="server"  Text="Label" Visible="False" ForeColor="Red"></asp:Label>
                                 </td>
     

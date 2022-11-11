@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
+
+
 
 namespace Chimbank
 {
@@ -133,8 +137,17 @@ namespace Chimbank
             else if (BD.CuentaYaExiste(int.Parse(txtNumeroCuenta.Text)) && BD.UsuarioYaExisteCorreo(txtCorreo.Text) && BD.UsuarioYaExisteId(txtNit.Text))
             {
                 BD.Cambiar_contraseña(txtClave.Text, txtNumeroCuenta.Text, txtNit.Text, txtCorreo.Text);
-                BD.InfoUsuario(BD.BuscarUsuario(txtCorreo.Text, txtClave.Text));
-                Response.Redirect("/Inicio/Principal.aspx");
+                
+                if (Usuario.user.Nit == null)
+                {
+                    BD.InfoUsuario(BD.BuscarUsuario(txtCorreo.Text, txtClave.Text));
+                    Response.Redirect("/Inicio/Principal.aspx");
+                }
+                else
+                {
+                    Response.Redirect("/Inicio/Principal.aspx");
+                }
+                
 
             }
 
@@ -144,7 +157,17 @@ namespace Chimbank
         //Salir
         protected void btnSalir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Iniciar.aspx");
+            if (Usuario.user.Nit == null)
+            {
+                Response.Redirect("/Iniciar.aspx");
+
+            }
+            else
+            {
+                Response.Redirect("/Ajustes/AjustesMenu.aspx");
+
+            }
+            
 
         }
     }

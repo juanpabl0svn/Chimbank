@@ -20,6 +20,9 @@ namespace Chimbank
         {
             try
             {
+                Random ran = new Random();
+
+                int numero = ran.Next(100, 1000);
                 string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
                 string time = DateTime.Now.ToString("h:mm:ss tt");
 
@@ -29,7 +32,10 @@ namespace Chimbank
                 escribir.AppendLine($"Proveedor ---- {Usuario.user.Numero_cuenta} ---- {Usuario.user.Nombre} ");
                 escribir.AppendLine($"");
                 escribir.AppendLine($"Realizado el {date} a las {time}");
-
+                escribir.AppendLine("");
+                escribir.AppendLine("Gracias por utilizar Chimbank para realizar sus transferencia, si tiene alguna");
+                escribir.AppendLine("");
+                escribir.AppendLine($"Comprobante # 0000{numero}");
 
                 txtVoucher.Text = escribir.ToString();
 

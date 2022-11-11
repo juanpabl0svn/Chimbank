@@ -70,7 +70,7 @@
                             </tr>
                             <tr>
                                 <td align="center" class="auto-style5" >
-                                    <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtUsuario" CssClass="textBox" runat="server"></asp:TextBox>
                                 </td>
                                 <td align="Center" class="auto-style6">
                                     <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
@@ -87,7 +87,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style5" align="center">
-                                    <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="txtContraseña" CssClass="textBox" runat="server" TextMode="Password"></asp:TextBox>
                                 </td>
                                 <td align="Center" class="auto-style6">
                                     &nbsp;</td>

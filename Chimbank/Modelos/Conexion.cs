@@ -164,7 +164,7 @@ namespace Chimbank
                 {
                     escribir.AppendLine($"+ {rdr["Valor"].ToString()}");
                 }
-                escribir.AppendLine("---------------------------------------------------------------------");
+                escribir.AppendLine("....................................................................");
             }
 
             rdr.Close();

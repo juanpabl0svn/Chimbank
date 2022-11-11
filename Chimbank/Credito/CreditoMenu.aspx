@@ -25,6 +25,25 @@
 
     <form id="form1" runat="server">
         <div>
+            <table style="width: 100%;">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="center"><asp:Label runat="server" CssClass="Milabel" Text="PRESTAMOS"></asp:Label></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+            <br />
+            <br />
             <table style="border-style: outset; width:60%; background-color: #008080;" align="center">
                 
                 <tr>

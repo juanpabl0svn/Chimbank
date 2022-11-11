@@ -58,6 +58,20 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="center">
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="118px" Width="137px"   ImageUrl="~/Diseños/ImgClave.png"  OnClick="ImageButton1_Click" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="center">
+                        <asp:Label ID="Label3" CssClass="text" runat="server" Text="Cambiar clave"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
                 
                 <tr>
                     <td>&nbsp;</td>
