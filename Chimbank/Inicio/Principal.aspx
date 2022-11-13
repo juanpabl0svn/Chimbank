@@ -137,25 +137,25 @@
                         <asp:Label runat="server" CssClass="text" Text="Transferir"  ></asp:Label></td>
                     <td align="center"><asp:Label runat="server" CssClass="text" Text="Ver movimientos"></asp:Label></td>
                     <td align="center"><asp:Label runat="server" CssClass="text" Text="Pagar credito"></asp:Label></td>
-
-                </tr>
-                
+                </tr>          
             </table>
             <br />
             <br />
             <br />
             <br />
             <br />
-
-
-            <table style="border-style: outset;width:100%; background-color: #008080;" align="center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <table style="width:100%; background-color: #008080;" align="center">
                 <tr>
                     <td>&nbsp;</td>
-                    <td >
-                        <asp:Label ID="Label2" runat="server" Text="Atencion al cliente: 01 8000 1234" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
+                    <td align="right" >
+                        <asp:Label ID="Label2" runat="server" Text="    Atencion al cliente: 01 8000 1234" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
-                    <td >
+                    <td align="center">
                         <asp:Label ID="Label3" runat="server" Text="Contactenos al: +57 3004353401" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
@@ -163,36 +163,36 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td class="auto-style1"><asp:Label ID="Label5" runat="server" Text="Correo: Chimbank@gmail.com" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label></td>
-                    <td><table>
+                    <td align="center" > <asp:Label ID="Label5" runat="server" Text="    Correo: Chimbank@gmail.com" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label></td>
+                    <td align="right"><table>
 
-                            <tr>
-                                <td>
-                                    <asp:ImageButton ID="ImageButton1" runat="server" />
+                            <tr >
+                                <td align="right">
+                                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Diseños/ImgFacebook.png" Width="35px" />
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="ImageButton2" runat="server" />
+                                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Diseños/ImgInstagram.png" Width="35px" />
 
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="ImageButton3" runat="server" />
+                                    <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Diseños/ImgTwitter.png" Width="35px"  />
 
                                 </td>
                             </tr>
                         </table></td>
-                    <td>
+                    <td align="center">
+                        <asp:Label ID="Label4" runat="server" CssClass="lbl" Text="QUE CHIMBA ES CHIMBANK" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
 
                     </td>
-                    <td>&nbsp;</td>
+                    <td align="center"></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td >
-                        <asp:Label ID="Label4" runat="server" CssClass="lbl" Text="QUE CHIMBA ES CHIMBANK" Font-Bold="True"  Font-Names="Century Gothic"  ForeColor="Black"></asp:Label>
-                    </td>
+                    <td align="center" >
+                                            </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
