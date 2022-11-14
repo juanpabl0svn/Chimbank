@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class Sign_up
+    public partial class Registrar
     {
 
         /// <summary>

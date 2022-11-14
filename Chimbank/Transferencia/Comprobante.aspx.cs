@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Chimbank
 {
-    public partial class Voucher : System.Web.UI.Page
+    public partial class Comprobante : System.Web.UI.Page
     {
         public static List<string> voucherList = new List<string>();
 

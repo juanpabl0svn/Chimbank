@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class WebForm3
+    public partial class Iniciar
     {
 
         /// <summary>

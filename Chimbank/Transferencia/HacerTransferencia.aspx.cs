@@ -144,10 +144,10 @@ namespace Chimbank
 
                 conectar.Hacer_transferencia(txtNumeroCuenta.Text, double.Parse(txtValor.Text));
 
-                Voucher.voucherList.Add(txtNumeroCuenta.Text);
-                Voucher.voucherList.Add(txtNit.Text);
-                Voucher.voucherList.Add(txtNombre.Text);
-                Voucher.voucherList.Add(txtValor.Text);
+                Comprobante.voucherList.Add(txtNumeroCuenta.Text);
+                Comprobante.voucherList.Add(txtNit.Text);
+                Comprobante.voucherList.Add(txtNombre.Text);
+                Comprobante.voucherList.Add(txtValor.Text);
 
                 Response.Redirect("/Transferencia/Comprobante.aspx");
 

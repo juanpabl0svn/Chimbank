@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarMenu.aspx.cs" Inherits="Chimbank.Sign_up" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarMenu.aspx.cs" Inherits="Chimbank.Registrar" %>
 
 <!DOCTYPE html>
 

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Chimbank
 {
-    public partial class Sign_up : System.Web.UI.Page
+    public partial class Registrar : System.Web.UI.Page
     {
         Random random = new Random();
 

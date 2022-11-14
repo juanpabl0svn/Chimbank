@@ -11,7 +11,7 @@ namespace Chimbank
 {
 
 
-    public partial class Voucher
+    public partial class Comprobante
     {
 
         /// <summary>
