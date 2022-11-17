@@ -52,7 +52,7 @@ namespace Chimbank
 
         }
 
-        //Busca la info de la cuenta guardada
+        //Busca la info de la cuenta guardada  HDU_8
         protected void btnBuscarInfo_Click(object sender, EventArgs e)
         {
             if(ddlCuentas.SelectedItem.Text == "Seleccionar")
@@ -109,7 +109,7 @@ namespace Chimbank
 
         }
 
-        //Realiza la transferencia
+        //Realiza la transferencia   HDU_10
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             if (Espacios_vacios())

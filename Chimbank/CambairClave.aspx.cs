@@ -115,8 +115,8 @@ namespace Chimbank
 
         }
 
-        //Cambiar clave
-        protected void btnRegistrar_Click(object sender, EventArgs e)
+        //Cambiar clave      HDU_11
+        protected void btnCambiarClave_Click(object sender, EventArgs e)
         {
             lblError.Visible = false;
 

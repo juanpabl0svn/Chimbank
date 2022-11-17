@@ -25,7 +25,7 @@ namespace Chimbank
 
         }
 
-        //Pedir credito
+        //Pedir credito    HDU_14
         protected void btnAdquirirCredito_Click(object sender, EventArgs e)
         {
             
@@ -48,6 +48,13 @@ namespace Chimbank
                             lblError.Visible = true;
                             lblError.ForeColor = Color.Red;
                             lblError.Text = "El banco no tiene aun tantos recursos para prestar, intente un valor menor a $100´000.000";
+
+                        }
+                        else if (double.Parse(txtvalorCredito.Text) < 0)
+                        {
+                            lblError.Visible = true;
+                            lblError.ForeColor = Color.Red;
+                            lblError.Text = "Valor negativo";
 
                         }
                         else 

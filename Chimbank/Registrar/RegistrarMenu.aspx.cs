@@ -250,7 +250,7 @@ namespace Chimbank
 
         }
 
-        //Registrar nuevo usuario
+        //Registrar nuevo usuario  HDU_7.2, HDU_1  y HDU_2
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             Esconder_etiquetas();

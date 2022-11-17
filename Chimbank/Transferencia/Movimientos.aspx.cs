@@ -11,7 +11,7 @@ namespace Chimbank
     {
         Conexion conexion = new Conexion();
 
-        //Imprime los moviminentos guardados en la base de datos
+        //Imprime los moviminentos guardados en la base de datos    HDU_15
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Usuario.user.Nit == null)

@@ -15,7 +15,7 @@ namespace Chimbank
 
         StringBuilder escribir = new StringBuilder();
 
-        //Imprime los datos enviados
+        //Imprime los datos enviados  HDU_13
         protected void Page_Load(object sender, EventArgs e)
         {
             try

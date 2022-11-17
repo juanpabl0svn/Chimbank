@@ -10,7 +10,7 @@ namespace Chimbank
 {
     public partial class Principal : System.Web.UI.Page
     {
-        //Ingresa con la informacion del usuario
+        //Ingresa con la informacion del usuario   HDU_4
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Usuario.user.Nit == null)

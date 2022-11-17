@@ -153,7 +153,7 @@
             <table style="width:60%;" align="center">
                 <tr>
                     <td class="auto-style1">
-                                    <asp:Button ID="Button1" runat="server" CssClass="button" Text="Cambiar" OnClick="btnRegistrar_Click" />
+                                    <asp:Button ID="Button1" runat="server" CssClass="button" Text="Cambiar" OnClick="btnCambiarClave_Click" />
                                 </td>
                     <td class="auto-style1"></td>
                     <td class="auto-style1"></td>

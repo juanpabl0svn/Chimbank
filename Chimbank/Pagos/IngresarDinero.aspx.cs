@@ -20,7 +20,7 @@ namespace Chimbank
             
         }
 
-        //Ingresar dinero a la cuenta
+        //Ingresar dinero a la cuenta   HDU_9
         protected void btnIngresarDinero_Click(object sender, EventArgs e)
         {
             if (double.TryParse(txtDineroIngresar.Text, out _))

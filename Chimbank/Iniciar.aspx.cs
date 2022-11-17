@@ -17,7 +17,7 @@ namespace Chimbank
         Conexion BD = new Conexion();
 
 
-        //Iniciar sesion
+        //Iniciar sesion  HDU_3
         protected void btnIniciar_Click(object sender, EventArgs e)
         {
             lblError.Visible = false;

@@ -13,7 +13,7 @@ namespace Chimbank
     {
         Conexion conexion = new Conexion();
 
-        //Trae la informacion del usuario
+        //Trae la informacion del usuario   HDU_12
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Usuario.user.Nit == null)

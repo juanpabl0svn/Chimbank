@@ -61,7 +61,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td align="center">
-                        <asp:ImageButton ID="ImageButton2" runat="server" Height="118px" Width="137px"   ImageUrl="~/Diseños/ImgClave.png"  OnClick="ImageButton1_Click" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="118px" Width="137px"  ImageUrl="~/Diseños/ImgClave.png"  OnClick="ImageClave_Click" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -88,7 +88,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td align="center">
-                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Diseños/ImgSalir.png" OnClick="ImageButton1_Click" Height="118px" Width="137px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Diseños/ImgSalir.png" OnClick="ImageSalir_Click" Height="118px" Width="137px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

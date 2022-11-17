@@ -11,20 +11,24 @@ namespace Chimbank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Usuario.user.Nit == null)
-            {
-                Response.Redirect("/Iniciar.aspx");
-            }
+            
             
 
 
 
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        protected void ImageSalir_Click(object sender, ImageClickEventArgs e)
         {
             Usuario.user = new Usuario();
             Response.Redirect("/Iniciar.aspx");
+
+        }
+
+        protected void ImageClave_Click(object sender, ImageClickEventArgs e)
+        {
+            Usuario.user = new Usuario();
+            Response.Redirect("/CambairClave.aspx");
 
         }
     }

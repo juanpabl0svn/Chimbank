@@ -14,7 +14,7 @@ namespace Chimbank
 
         }
 
-        //Volver a registrar usuario
+        //Volver a registrar usuario  HDU_7.1
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Registrar/RegistrarMenu.aspx");
